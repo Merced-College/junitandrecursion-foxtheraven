@@ -30,8 +30,12 @@ public class RecursionTest {
             return 0;
         }
 
+        //Grabs the first and second letter to check them
+        //and find if they are hi for counting
         char firstLetter = str.charAt(0);
         char secondLetter = str.charAt(1);
+        //If hi is found, count is incremented and we do a
+        //recursive call - else just do the call, no counting
         if (firstLetter == 'h' && secondLetter == 'i') {
             return 1 + countHi(str.substring(2));
         }
@@ -60,18 +64,22 @@ public class RecursionTest {
 
         char firstLetter = str.charAt(0);
         char secondLetter = str.charAt(1);
+        //Checks for string length BEFORE trying to grab the third letter
+        //If length is 2, we run the recursive calls first here
+        //This fixes an out-of-bounds access error found in the unit tests
         if (str.length() == 2) {
             if (firstLetter == 'h' && secondLetter == 'i') {
                 return 1 + countHi2(str.substring(2));
             }
             else {
-                return 0 + countHi2(str.substring(2));
+                return countHi2(str.substring(2));
             }
         }
+        //If string length isn't two, we grab the third letter
         char thirdLetter = str.charAt(2);
 
         if (firstLetter == 'x' && secondLetter == 'h' && thirdLetter == 'i') {
-            return 0 + countHi2(str.substring(3));
+            return countHi2(str.substring(3));
         }
         else if (firstLetter == 'h' && secondLetter == 'i') {
             return 1 + countHi2(str.substring(2));
@@ -142,8 +150,13 @@ public class RecursionTest {
             return 0;
         }
 
+        //This removes the last digit from n
+        //Ex: 126 becomes 12
         int nRemoved = (n / 10);
 
+        //n % 10 returns the last digit,
+        //nremoved % 10 returns the second to last digit
+        //If both are 8, count double
         if (n % 10 == 8 && nRemoved % 10 == 8) {
             return 2 + count8(nRemoved);
         }
