@@ -8,8 +8,11 @@ public class RecursionTest {
 
         System.out.println(countHi("xxhixxxxhixxxx"));
         System.out.println(strCount("catcowcat", "cat"));
+        System.out.println();
 
     }//end main
+
+//----------------------------------------------------
 
     //recursive problem 1
     public static int countHi(String str) {
@@ -35,6 +38,35 @@ public class RecursionTest {
 
     }//end countHi method
 
+//----------------------------------------------------
+
+    public static int countHi2(String str) {
+
+        //check for null
+        if (str == null) {
+            return 0;
+        }
+
+        //base case
+        if (str.length() <= 1) {
+            return 0;
+        }
+
+        char firstLetter = str.charAt(0);
+        char secondLetter = str.charAt(1);
+        char thirdLetter = str.charAt(2);
+        if (firstLetter == 'x' && secondLetter == 'h' && thirdLetter == 'i') {
+            return 0 + countHi(str.substring(3));
+        }
+        if (firstLetter == 'h' && secondLetter == 'i') {
+            return 1 + countHi(str.substring(2));
+        }
+        else {
+            return countHi(str.substring(1));
+        }
+
+    }
+    
 //----------------------------------------------------
 
     //recursive problem 2

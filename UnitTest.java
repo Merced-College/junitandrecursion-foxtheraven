@@ -76,4 +76,7 @@ public class UnitTest {
         org.junit.Assert.assertEquals(0, result);
     }
 
-}
+//----------------------------------------------------
+
+
+}//end class
