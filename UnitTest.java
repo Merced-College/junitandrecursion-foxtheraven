@@ -113,6 +113,36 @@ public class UnitTest {
 //----------------------------------------------------
 
     //Testing stringClean method
+    //1
+    @org.junit.Test
+    public void test1StringClean() {
+        String result = RecursionTest.stringClean("aabbbcedd");
+        org.junit.Assert.assertEquals("ce", result);
+    }
+    //2
+    @org.junit.Test
+    public void test2StringClean() {
+        String result = RecursionTest.stringClean("aaaaaaaaaab");
+        org.junit.Assert.assertEquals("b", result);
+    }
+    //3
+    @org.junit.Test
+    public void test3StringClean() {
+        String result = RecursionTest.stringClean("dhgskdjdjd");
+        org.junit.Assert.assertEquals("dhgskdjdjd", result);
+    }
+    //4
+    @org.junit.Test
+    public void test4StringClean() {
+        String result = RecursionTest.stringClean("eeeeeeeeeeeeeeeeeee");
+        org.junit.Assert.assertEquals("", result);
+    }
+    //5
+    @org.junit.Test
+    public void test5StringClean() {
+        String result = RecursionTest.stringClean("");
+        org.junit.Assert.assertEquals("", result);
+    }
 
 //----------------------------------------------------
 

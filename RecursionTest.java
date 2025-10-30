@@ -104,26 +104,27 @@ public class RecursionTest {
 //----------------------------------------------------
 
     public static  String stringClean(String str) {
-        System.out.println(str);
-
+        
         //check for null
         if (str == null) {
-            return "null";
+            return null;
         }
 
         //base case
         if (str.length() <= 1) {
-            return "";
+            return str;
         }
 
+        //Remember you can add chars to strings
         char firstLetter = str.charAt(0);
         char secondLetter = str.charAt(1);
         if (firstLetter == secondLetter) {
-            return stringClean(str.substring(2));
-        }
-        else {
             return stringClean(str.substring(1));
         }
+        else {
+            return firstLetter + stringClean(str.substring(1));
+        }
+        
 
     }//end stringClean method
 
