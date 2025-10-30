@@ -8,7 +8,7 @@ public class RecursionTest {
 
         System.out.println(countHi("xxhixxxxhixxxx"));
         System.out.println(strCount("catcowcat", "cat"));
-        System.out.println();
+        System.out.println(countHi2("ahixhi"));
 
     }//end main
 
@@ -41,6 +41,7 @@ public class RecursionTest {
 //----------------------------------------------------
 
     public static int countHi2(String str) {
+        System.out.println(str);
 
         //check for null
         if (str == null) {
@@ -58,7 +59,7 @@ public class RecursionTest {
         if (firstLetter == 'x' && secondLetter == 'h' && thirdLetter == 'i') {
             return 0 + countHi(str.substring(3));
         }
-        if (firstLetter == 'h' && secondLetter == 'i') {
+        else if (firstLetter == 'h' && secondLetter == 'i') {
             return 1 + countHi(str.substring(2));
         }
         else {
