@@ -5,39 +5,39 @@
 public class UnitTest {
     
     //Testing CountHi method:
-    //first JUnit test
+    //1
     @org.junit.Test
-    public void testCountHi1() {
+    public void test1CountHi() {
         int result = RecursionTest.countHi("xxhixxxxhixxxx");
         org.junit.Assert.assertEquals(2, result);
     }
-    //second JUnit test
+    //2
     @org.junit.Test
-    public void testCountHi2() {
+    public void test2CountHi() {
         int result = RecursionTest.countHi("aklhdajskhd");
         org.junit.Assert.assertEquals(0, result);
     }
-    //third JUnit test
+    //3
     @org.junit.Test
-    public void testCountHi3() {
+    public void test3CountHi() {
         int result = RecursionTest.countHi("hihihihihi");
         org.junit.Assert.assertEquals(5, result);
     }
-    //fourth JUnit test
+    //4
     @org.junit.Test
-    public void testCountHi4() {
+    public void test4CountHi() {
         int result = RecursionTest.countHi("hihihihieeee");
         org.junit.Assert.assertEquals(4, result);
     }
-    //fifth JUnit test
+    //5
     @org.junit.Test
-    public void testCountHi5() {
+    public void test5CountHi() {
         int result = RecursionTest.countHi("");
         org.junit.Assert.assertEquals(0, result);
     }
-    //sixth JUnit test
+    //6
     @org.junit.Test
-    public void testCountHi6() {
+    public void test6CountHi() {
         int result = RecursionTest.countHi(null);
         org.junit.Assert.assertEquals(0, result);
     }
@@ -45,38 +45,57 @@ public class UnitTest {
 //----------------------------------------------------
 
     //Testing strCount method:
-    //first JUnit test
+    //1
     @org.junit.Test
-    public void testStrCount1() {
+    public void test1StrCount() {
         int result = RecursionTest.strCount("catcowcat", "cat");
         org.junit.Assert.assertEquals(2, result);
     }
-    //second JUnit test
+    //2
     @org.junit.Test
-    public void testStrCount2() {
+    public void test2StrCount() {
         int result = RecursionTest.strCount("cowmewdog", "cat");
         org.junit.Assert.assertEquals(0, result);
     }
-    //third JUnit test
+    //3
     @org.junit.Test
-    public void testStrCount3() {
+    public void test3StrCount() {
         int result = RecursionTest.strCount("catcatcatcatcat", "cat");
         org.junit.Assert.assertEquals(5, result);
     }
-    //fourth JUnit test
+    //4
     @org.junit.Test
-    public void testStrCount4() {
+    public void test4StrCount() {
         int result = RecursionTest.strCount(null, "cat");
         org.junit.Assert.assertEquals(0, result);
     }
-    //fifth JUnit test
+    //5
     @org.junit.Test
-    public void testStrCount5() {
+    public void test5StrCount() {
         int result = RecursionTest.strCount("", "cat");
         org.junit.Assert.assertEquals(0, result);
     }
 
 //----------------------------------------------------
 
+    //Testing countHi2 method:
+    //1
+    @org.junit.Test
+    public void test1CountHi2() {
+        int result = RecursionTest.countHi2("axhibxhiaahibbhi");
+        org.junit.Assert.assertEquals(2, result);
+    }
+    //2
+    @org.junit.Test
+    public void test2CountHi2() {
+        int result = RecursionTest.countHi2("asdjkashski");
+        org.junit.Assert.assertEquals(0, result);
+    }
+    //3
+    @org.junit.Test
+    public void test1CountHi3() {
+        int result = RecursionTest.countHi2("xhixhixhixhixhi");
+        org.junit.Assert.assertEquals(0, result);
+    }
 
 }//end class

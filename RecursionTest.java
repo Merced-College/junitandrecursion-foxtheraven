@@ -6,8 +6,8 @@ public class RecursionTest {
 
     public static void main (String[] args) {
 
-        System.out.println(countHi("xxhixxxxhixxxx"));
-        System.out.println(strCount("catcowcat", "cat"));
+        //System.out.println(countHi("xxhixxxxhixxxx"));
+        //System.out.println(strCount("catcowcat", "cat"));
         System.out.println(countHi2("ahixhi"));
 
     }//end main
@@ -55,15 +55,24 @@ public class RecursionTest {
 
         char firstLetter = str.charAt(0);
         char secondLetter = str.charAt(1);
+        if (str.length() == 2) {
+            if (firstLetter == 'h' && secondLetter == 'i') {
+                return 1 + countHi2(str.substring(2));
+            }
+            else {
+                return 0 + countHi2(str.substring(2));
+            }
+        }
         char thirdLetter = str.charAt(2);
+
         if (firstLetter == 'x' && secondLetter == 'h' && thirdLetter == 'i') {
-            return 0 + countHi(str.substring(3));
+            return 0 + countHi2(str.substring(3));
         }
         else if (firstLetter == 'h' && secondLetter == 'i') {
-            return 1 + countHi(str.substring(2));
+            return 1 + countHi2(str.substring(2));
         }
         else {
-            return countHi(str.substring(1));
+            return countHi2(str.substring(1));
         }
 
     }
