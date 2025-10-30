@@ -7,10 +7,10 @@ public class RecursionTest {
     public static void main (String[] args) {
 
         //First tests for each method
-        //System.out.println(countHi("xxhixxxxhixxxx"));
-        //System.out.println(strCount("catcowcat", "cat"));
-        //System.out.println(countHi2("ahixhi"));
-        //System.out.println(stringClean("yyzzza"));
+        System.out.println(countHi("xxhixxxxhixxxx"));
+        System.out.println(strCount("catcowcat", "cat"));
+        System.out.println(countHi2("ahixhi"));
+        System.out.println(stringClean("yyzzza"));
         System.out.println(count8(8818));
 
     }//end main
@@ -130,7 +130,6 @@ public class RecursionTest {
             return firstLetter + stringClean(str.substring(1));
         }
         
-
     }//end stringClean method
 
 //----------------------------------------------------

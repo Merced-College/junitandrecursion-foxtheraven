@@ -96,19 +96,19 @@ public class UnitTest {
     }
     //3
     @org.junit.Test
-    public void test1CountHi3() {
+    public void test3CountHi2() {
         int result = RecursionTest.countHi2("xhixhixhixhixhi");
         org.junit.Assert.assertEquals(0, result);
     }
     //4
     @org.junit.Test
-    public void test1CountHi4() {
+    public void test4CountHi2() {
         int result = RecursionTest.countHi2("hi");
         org.junit.Assert.assertEquals(1, result);
     }
     //5
     @org.junit.Test
-    public void test1CountHi5() {
+    public void test5CountHi2() {
         int result = RecursionTest.countHi2("x");
         org.junit.Assert.assertEquals(0, result);
     }
@@ -180,7 +180,6 @@ public class UnitTest {
         int result = RecursionTest.count8(8);
         org.junit.Assert.assertEquals(1, result);
     }
-
 
 //----------------------------------------------------
 
