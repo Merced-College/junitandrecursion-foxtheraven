@@ -112,6 +112,18 @@ public class UnitTest {
         int result = RecursionTest.countHi2("x");
         org.junit.Assert.assertEquals(0, result);
     }
+    //6
+    @org.junit.Test
+    public void test6CountHi2() {
+        int result = RecursionTest.countHi2("");
+        org.junit.Assert.assertEquals(0, result);
+    }
+    //7
+    @org.junit.Test
+    public void test7CountHi2() {
+        int result = RecursionTest.countHi2(null);
+        org.junit.Assert.assertEquals(0, result);
+    }
 
 //----------------------------------------------------
 
@@ -145,6 +157,12 @@ public class UnitTest {
     public void test5StringClean() {
         String result = RecursionTest.stringClean("");
         org.junit.Assert.assertEquals("", result);
+    }
+    //6
+    @org.junit.Test
+    public void test6StringClean() {
+        String result = RecursionTest.stringClean(null);
+        org.junit.Assert.assertEquals(null, result);
     }
 
 //----------------------------------------------------
@@ -180,6 +198,7 @@ public class UnitTest {
         int result = RecursionTest.count8(8);
         org.junit.Assert.assertEquals(1, result);
     }
+    
 
 //----------------------------------------------------
 
