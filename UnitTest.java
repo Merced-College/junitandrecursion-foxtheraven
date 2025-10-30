@@ -2,6 +2,9 @@
 //10-28-25
 //Recursion & JUnit
 
+//Note: Generally, test expected cases as well as edge cases
+//ie full of the expected condition, void of the expected condition,
+//and null
 public class UnitTest {
     
     //Testing CountHi method:
@@ -147,7 +150,37 @@ public class UnitTest {
 //----------------------------------------------------
 
     //Testing count8 method
-    //
+    //1
+    @org.junit.Test
+    public void test1Count8() {
+        int result = RecursionTest.count8(818188);
+        org.junit.Assert.assertEquals(5, result);
+    }
+    //2
+    @org.junit.Test
+    public void test2Count8() {
+        int result = RecursionTest.count8(111111);
+        org.junit.Assert.assertEquals(0, result);
+    }
+    //3
+    @org.junit.Test
+    public void test3count8() {
+        int result = RecursionTest.count8(888888);
+        org.junit.Assert.assertEquals(11, result);
+    }
+    //4
+    @org.junit.Test
+    public void test4Count8() {
+        int result = RecursionTest.count8(0);
+        org.junit.Assert.assertEquals(0, result);
+    }
+    //5
+    @org.junit.Test
+    public void test5Count8() {
+        int result = RecursionTest.count8(8);
+        org.junit.Assert.assertEquals(1, result);
+    }
+
 
 //----------------------------------------------------
 
