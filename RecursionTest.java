@@ -6,10 +6,12 @@ public class RecursionTest {
 
     public static void main (String[] args) {
 
+        //First tests for each method
         //System.out.println(countHi("xxhixxxxhixxxx"));
         //System.out.println(strCount("catcowcat", "cat"));
         //System.out.println(countHi2("ahixhi"));
-        System.out.println(stringClean("yyzzza"));
+        //System.out.println(stringClean("yyzzza"));
+        System.out.println(count8(8818));
 
     }//end main
 
@@ -41,8 +43,10 @@ public class RecursionTest {
 
 //----------------------------------------------------
 
+    //recursive problem 2
     public static int countHi2(String str) {
-        System.out.println(str);
+        //"Old-fashioned" debugging line    
+        //System.out.println(str);
 
         //check for null
         if (str == null) {
@@ -80,7 +84,7 @@ public class RecursionTest {
     
 //----------------------------------------------------
 
-    //recursive problem 2
+    //recursive problem 3
     public static int strCount(String str, String sub) {
 
         //check if null
@@ -103,6 +107,7 @@ public class RecursionTest {
 
 //----------------------------------------------------
 
+    //recursive problem 4
     public static  String stringClean(String str) {
         
         //check for null
@@ -127,6 +132,30 @@ public class RecursionTest {
         
 
     }//end stringClean method
+
+//----------------------------------------------------
+
+    //recursive problem 5
+    public static int count8(int n) {
+
+        //base case
+        if (n == 0) {
+            return 0;
+        }
+
+        int nRemoved = (n / 10);
+
+        if (n % 10 == 8 && nRemoved % 10 == 8) {
+            return 2 + count8(nRemoved);
+        }
+        else if (n % 10 == 8) {
+            return 1 + count8(nRemoved);
+        }
+        else {
+            return 0 + count8(nRemoved);
+        }
+
+    }//end count8 method
 
 //----------------------------------------------------
 

@@ -117,13 +117,13 @@ public class UnitTest {
     @org.junit.Test
     public void test1StringClean() {
         String result = RecursionTest.stringClean("aabbbcedd");
-        org.junit.Assert.assertEquals("ce", result);
+        org.junit.Assert.assertEquals("abced", result);
     }
     //2
     @org.junit.Test
     public void test2StringClean() {
         String result = RecursionTest.stringClean("aaaaaaaaaab");
-        org.junit.Assert.assertEquals("b", result);
+        org.junit.Assert.assertEquals("ab", result);
     }
     //3
     @org.junit.Test
@@ -135,7 +135,7 @@ public class UnitTest {
     @org.junit.Test
     public void test4StringClean() {
         String result = RecursionTest.stringClean("eeeeeeeeeeeeeeeeeee");
-        org.junit.Assert.assertEquals("", result);
+        org.junit.Assert.assertEquals("e", result);
     }
     //5
     @org.junit.Test
@@ -143,6 +143,11 @@ public class UnitTest {
         String result = RecursionTest.stringClean("");
         org.junit.Assert.assertEquals("", result);
     }
+
+//----------------------------------------------------
+
+    //Testing count8 method
+    //
 
 //----------------------------------------------------
 
