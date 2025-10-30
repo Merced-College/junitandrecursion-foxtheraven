@@ -8,7 +8,8 @@ public class RecursionTest {
 
         //System.out.println(countHi("xxhixxxxhixxxx"));
         //System.out.println(strCount("catcowcat", "cat"));
-        System.out.println(countHi2("ahixhi"));
+        //System.out.println(countHi2("ahixhi"));
+        System.out.println(stringClean("yyzzza"));
 
     }//end main
 
@@ -75,7 +76,7 @@ public class RecursionTest {
             return countHi2(str.substring(1));
         }
 
-    }
+    }//end countHi2 method
     
 //----------------------------------------------------
 
@@ -99,6 +100,32 @@ public class RecursionTest {
         return strCount(str.substring(1), sub);
 
     }//end strCount method
+
+//----------------------------------------------------
+
+    public static  String stringClean(String str) {
+        System.out.println(str);
+
+        //check for null
+        if (str == null) {
+            return "null";
+        }
+
+        //base case
+        if (str.length() <= 1) {
+            return "";
+        }
+
+        char firstLetter = str.charAt(0);
+        char secondLetter = str.charAt(1);
+        if (firstLetter == secondLetter) {
+            return stringClean(str.substring(2));
+        }
+        else {
+            return stringClean(str.substring(1));
+        }
+
+    }//end stringClean method
 
 //----------------------------------------------------
 

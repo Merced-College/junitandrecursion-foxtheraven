@@ -97,5 +97,23 @@ public class UnitTest {
         int result = RecursionTest.countHi2("xhixhixhixhixhi");
         org.junit.Assert.assertEquals(0, result);
     }
+    //4
+    @org.junit.Test
+    public void test1CountHi4() {
+        int result = RecursionTest.countHi2("hi");
+        org.junit.Assert.assertEquals(1, result);
+    }
+    //5
+    @org.junit.Test
+    public void test1CountHi5() {
+        int result = RecursionTest.countHi2("x");
+        org.junit.Assert.assertEquals(0, result);
+    }
+
+//----------------------------------------------------
+
+    //Testing stringClean method
+
+//----------------------------------------------------
 
 }//end class
